@@ -21,7 +21,7 @@ import Form from "./Reusable/Form";
 import Confirmation from "./Components/Confirmation";
 import { ScrollRestoration } from "react-router-dom";
 
-axios.defaults.baseURL = "https://pottery-pro.vercel.app";
+axios.defaults.baseURL = "http://pottery-pro.vercel.app";
 axios.defaults.withCredentials = true;
 
 function App() {
