@@ -26,10 +26,11 @@ const allowCors = fn => async (req, res) => {
 };
 
 
-router.get("/", test);
-router.post("/register", registerUser);
-router.post("/login", loginUser);
-router.get("/profile", getProfile);
-router.post("/logout", logout);
+// Apply `allowCors` to all routes
+router.get("/", allowCors(test));
+router.post("/register", allowCors(registerUser));
+router.post("/login", allowCors(loginUser));
+router.get("/profile", allowCors(getProfile));
+router.post("/logout", allowCors(logout));
 
 module.exports = router;
