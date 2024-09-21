@@ -21,7 +21,7 @@ import Form from "./Reusable/Form";
 import Confirmation from "./Components/Confirmation";
 import { ScrollRestoration } from "react-router-dom";
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://potterypro.onrender.com";
 axios.defaults.withCredentials = true;
 
 function App() {
