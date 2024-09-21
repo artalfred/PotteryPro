@@ -6,6 +6,8 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 
+app.use(cors())
+
 // DATABASE CONNECTIONS
 mongoose
   .connect(process.env.MONGODB_URL)
