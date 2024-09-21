@@ -14,7 +14,7 @@
   "name": "server",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon ./api/index.js",
+    "start": "node ./api/index.js",
     "build": "npm i"
   },
   "author": "Art Alfred Bernales",
