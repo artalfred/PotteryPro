@@ -14,7 +14,7 @@ router.use(
   cors({
     origin: "https://artfullprotterypro.vercel.app",
     credentials: true,
-    methods: "POST, GET"
+    methods: "GET, POST"
   })
 );
 
