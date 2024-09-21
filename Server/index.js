@@ -20,5 +20,5 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", require("./routes/authRoutes"));
 
-const port = process.env.PORT || 8000;
+const port = "https://artfullprotterypro.vercel.app/";
 app.listen(port, () => console.log("listening on port " + port));
