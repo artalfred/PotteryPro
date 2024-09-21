@@ -9,27 +9,24 @@ const {
   logout,
 } = require("../controllers/authController");
 
-// MIDDLEWARE
-const allowCors = fn => async (req, res) => {
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', 'https://pottery-pro-71wh.vercel.app'); // Only allow your frontend domain
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-  );
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
-  }
-  return await fn(req, res);
-};
+const router = express.Router();
 
-// Apply `allowCors` to all routes
-router.get("/", allowCors(test));
-router.post("/register", allowCors(registerUser));
-router.post("/login", allowCors(loginUser));
-router.get("/profile", allowCors(getProfile));
-router.post("/logout", allowCors(logout));
+// MIDDLEWARE
+
+// Apply CORS globally
+const app = express(); // Assuming this is your Express app
+app.use(cors({
+  origin: 'https://pottery-pro-71wh.vercel.app', // Your frontend domain
+  credentials: true, // Allow credentials (cookies, auth headers)
+  methods: 'GET,OPTIONS,PATCH,DELETE,POST,PUT', // Allowed methods
+  allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+}));
+
+// ROUTES
+router.get("/", test);
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.get("/profile", getProfile);
+router.post("/logout", logout);
 
 module.exports = allowCors(router);
