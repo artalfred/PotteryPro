@@ -9,8 +9,6 @@ const {
   logout,
 } = require("../controllers/authController");
 
-
-
 // MIDDLEWARE
 router.use(
   cors({
