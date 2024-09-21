@@ -13,8 +13,7 @@ const {
 router.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
-    methods: "GET,POST",
+    origin: "https://pottery-pro-71wh.vercel.app",
   })
 );
 
