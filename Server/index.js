@@ -12,12 +12,6 @@ mongoose
   .then(() => console.log("Database is connected"))
   .catch((err) => console.log("Databases not connected", err));
 
-// MIDDLEWARE
-app.use(cors({
-  origin: "https://artfullprotterypro.vercel.app" || "http://localhost:5173",  // Ensure correct origin
-  credentials: true,
-}));
-
 // MIDDLEWARE FOR authController
 app.use(express.json());
 
