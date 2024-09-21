@@ -8,7 +8,7 @@ const app = express();
 
 // DATABASE CONNECTIONS
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGODB_URL)
   .then(() => console.log("Database is connected"))
   .catch((err) => console.log("Databases not connected", err));
 
@@ -20,5 +20,5 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", require("./routes/authRoutes"));
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => console.log("listening on port " + port));
