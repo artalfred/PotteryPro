@@ -12,10 +12,6 @@ mongoose
   .then(() => console.log("Database is connected"))
   .catch((err) => console.log("Databases not connected", err));
 
-// TEST ROUTE
-app.get("/", (req, res) => {
-  res.send("test is working");
-});
 
 // MIDDLEWARE FOR authController
 app.use(express.json());
@@ -23,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/auth", require("./routes/authRoutes"));
+app.use("/", require("./routes/authRoutes"));
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log("listening on port " + port));
