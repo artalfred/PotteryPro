@@ -91,6 +91,7 @@ const loginUser = async (req, res) => {
   } catch (err) {}
 };
 
+// get profile endpoint
 const getProfile = (req, res) => {
   const { token } = req.cookies;
   if (token) {
