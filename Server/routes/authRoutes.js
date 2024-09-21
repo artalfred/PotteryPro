@@ -12,8 +12,9 @@ const {
 // MIDDLEWARE
 router.use(
   cors({
-    credentials: true,
     origin: "https://artfullprotterypro.vercel.app",
+    credentials: true,
+    methods: "POST, GET"
   })
 );
 
