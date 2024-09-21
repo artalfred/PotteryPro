@@ -16,9 +16,7 @@ router.use(
   cors({
     credentials: true,
     origin: "https://pottery-pro-71wh.vercel.app",
-    methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
-    allowedHeaders:
-      "Content-Type, Authorization, X-Requested-With, X-CSRF-Token",
+    methods: "GET,POST",
   })
 );
 
