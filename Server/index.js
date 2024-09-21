@@ -12,6 +12,11 @@ mongoose
   .then(() => console.log("Database is connected"))
   .catch((err) => console.log("Databases not connected", err));
 
+// TEST ROUTE
+app.get("/", (req, res) => {
+  res.send("test is working");
+});
+
 // MIDDLEWARE FOR authController
 app.use(express.json());
 
