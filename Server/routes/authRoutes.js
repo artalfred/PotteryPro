@@ -32,4 +32,4 @@ router.post("/login", allowCors(loginUser));
 router.get("/profile", allowCors(getProfile));
 router.post("/logout", allowCors(logout));
 
-module.exports = allowCors;
+module.exports = allowCors(router);
