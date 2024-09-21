@@ -10,7 +10,7 @@ app.use(cors())
 
 // DATABASE CONNECTIONS
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect(process.env.MONGODB_CONNECT_URI)
   .then(() => console.log("Database is connected"))
   .catch((err) => console.log("Databases not connected", err));
 
