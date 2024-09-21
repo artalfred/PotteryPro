@@ -9,24 +9,23 @@ const {
   logout,
 } = require("../controllers/authController");
 
-const router = express.Router();
+
 
 // MIDDLEWARE
+router.use(
+  cors({
+    credentials: true,
+    origin: "https://pottery-pro-71wh.vercel.app",
+    methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
+    allowedHeaders:
+      "Content-Type, Authorization, X-Requested-With, X-CSRF-Token",
+  })
+);
 
-// Apply CORS globally
-const app = express(); // Assuming this is your Express app
-app.use(cors({
-  origin: 'https://pottery-pro-71wh.vercel.app', // Your frontend domain
-  credentials: true, // Allow credentials (cookies, auth headers)
-  methods: 'GET,OPTIONS,PATCH,DELETE,POST,PUT', // Allowed methods
-  allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-}));
-
-// ROUTES
 router.get("/", test);
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/profile", getProfile);
 router.post("/logout", logout);
 
-module.exports = allowCors(router);
+module.exports = router;
