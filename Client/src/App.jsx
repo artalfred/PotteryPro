@@ -19,7 +19,6 @@ import Advance from "./Components/Advance";
 import Master from "./Components/Master";
 import Form from "./Reusable/Form";
 import Confirmation from "./Components/Confirmation";
-import { ScrollRestoration } from "react-router-dom";
 
 axios.defaults.baseURL = "https://potterypro.onrender.com";
 axios.defaults.withCredentials = true;
