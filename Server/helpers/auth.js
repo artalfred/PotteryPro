@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // TO ENCRYPT PASSWORD IN THE DATABASE
 const hashPassword = (password) => {
