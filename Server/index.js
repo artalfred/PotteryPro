@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/", require("./routes/authRoutes"));
+app.use("/auth", require("./routes/authRoutes"));
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log("listening on port " + port));
