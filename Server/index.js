@@ -8,7 +8,7 @@ const app = express();
 
 // DATABASE CONNECTIONS
 mongoose
-  .connect(process.env.MONGO_URL, { useNewUrlParser: true })
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Database is connected"))
   .catch((err) => console.log("Databases not connected", err));
 
