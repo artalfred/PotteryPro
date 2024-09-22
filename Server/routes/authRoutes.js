@@ -14,7 +14,7 @@ router.use(
   cors({
     credentials: true,
     origin: "https://artfulpotteryprofrontend.netlify.app",
-    methods: "GET, POST",
+    methods: "GET, POST, OPTIONS, PATCH",
     optionsSuccessStatus: 200,
   })
 );
