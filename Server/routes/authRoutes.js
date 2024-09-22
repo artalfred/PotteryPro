@@ -19,10 +19,6 @@ router.use(
   })
 );
 
-const app = express();
-
-app.use(cors(router));
-
 router.get("/", test);
 router.post("/register", registerUser);
 router.post("/login", loginUser);
