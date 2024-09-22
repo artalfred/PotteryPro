@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     credentials: true,
-    origin: "*",
+    origin: "https://artfulpotteryprofrontend.netlify.app",
     methods: "GET, POST",
     optionsSuccessStatus: 200,
   })
