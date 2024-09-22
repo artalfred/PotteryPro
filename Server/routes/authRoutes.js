@@ -13,7 +13,7 @@ const {
 router.use(
   cors({
     credentials: true,
-    origin: "https://artfulpotteryprofrontend.netlify.app",
+    origin: "http://localhost:5173",
     methods: "GET, POST, OPTIONS, PATCH",
     optionsSuccessStatus: 200,
   })
