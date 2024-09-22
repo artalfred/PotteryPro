@@ -21,7 +21,7 @@ import Form from "./Reusable/Form";
 import Confirmation from "./Components/Confirmation";
 
 axios.defaults.baseURL = "https://potterypro.onrender.com";
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
